@@ -46,9 +46,14 @@ export default {
   line-height: 60px;
   text-align: center;
 }
+@media (min-width: 1200px) {
+  .content-box {
+    left: 200px;
+  }
+}
 .content-box {
   position: absolute;
-  left: 65px;
+  left: 200px;
   right: 0;
   top: 70px;
   bottom: 0;
@@ -57,9 +62,6 @@ export default {
   transition: left 0.3s ease-in-out;
   background: #f0f0f0;
   overflow hidden
-  .content-collapse{
-    left: 65px;
-  }
   .content {
     width: auto;
     height: 100%;
@@ -69,9 +71,7 @@ export default {
     background #fff;
   }
 }
-@media (min-width: 1200px) {
-  .content-box {
-    left: 200px;
-  }
+.content-collapse{
+  left: 65px;
 }
 </style>

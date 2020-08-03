@@ -22,11 +22,11 @@ export const constantRoutes = [{
     component: () => import('@/components/views/login')
   },
   {
-    path: '/home',
+    path: '/page',
     component: Layout,
-    name: 'home',
+    name: 'Layout',
     children: [{
-      path: '/home',
+      path: 'home',
       component: () => import('@/components/views/home'),
       name: 'home',
       meta: {

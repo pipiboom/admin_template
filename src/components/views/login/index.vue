@@ -31,7 +31,7 @@ export default {
 		login() {
 			this.$refs.loginForm.validate((valid) => {
 				if (valid) {
-					this.$router.push('/home')
+					this.$router.push({name: 'home'})
 				};
 				return false;
 			})
