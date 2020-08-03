@@ -1,7 +1,7 @@
 <template>
 	<div class="error-box">
 		<div class="error_info">
-			<img src="@/assets/404.png" alt="">
+			<img src="@/assets/images/404.png" alt="">
 			<span>啊哦~ 你所访问的页面不存在</span>
 		</div>
 		<el-button type="primary" @click="goBack">返回</el-button>

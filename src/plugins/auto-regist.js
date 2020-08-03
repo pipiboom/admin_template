@@ -13,6 +13,7 @@ const requireComponent = require.context(
   /\w+\.vue$/
 )
 
+console.log(requireComponent);
 requireComponent.keys().forEach(fileName => {
   // 获取组件配置
   const componentConfig = requireComponent(fileName)

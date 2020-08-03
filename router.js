@@ -1,11 +1,11 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 // import Login from 'components/views/login/login';
-// import Layout from 'components/layout/layout';
+import Layout from 'components/layout/layout';
 Vue.use(VueRouter);
 export const constantRoutes = [{
     path: '/',
-    redirect: '/404',
+    redirect: '/login',
     hidden: true,
     noCache: true
   },
@@ -16,21 +16,25 @@ export const constantRoutes = [{
     hidden: true,
     noCache: true
   },
-  // {
-  //   redirect: '/home',
-  //   path: '/homeTo',
-  //   component: Layout,
-  //   name: 'homeTo',
-  //   children: [{
-  //     path: '/home',
-  //     component: () => import('@/components/views/home'),
-  //     name: 'home',
-  //     meta: {
-  //       title: '首页',
-  //       icon: 'chart'
-  //     }
-  //   }]
-  // },
+  {
+    path: '/login',
+    name: 'login',
+    component: () => import('@/components/views/login')
+  },
+  {
+    path: '/home',
+    component: Layout,
+    name: 'home',
+    children: [{
+      path: '/home',
+      component: () => import('@/components/views/home'),
+      name: 'home',
+      meta: {
+        title: '首页',
+        icon: 'chart'
+      }
+    }]
+  },
   {
     path: '*',
     redirect: '/404',
