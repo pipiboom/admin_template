@@ -14,6 +14,9 @@ import router from '../router'
 import store from './store/index'
 // 引入bus总线
 import bus from './utils/bus'
+
+// import '@/assets/style/utils.less'
+
 // elementUI扩展组件注册
 Vue.use(bus)
 Vue.use(Fragment.Plugin)

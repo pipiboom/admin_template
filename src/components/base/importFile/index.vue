@@ -127,7 +127,7 @@ export default {
 };
 </script>
 
-<style scoped lang="stylus">
+<style scoped lang="less">
 /deep/.el-upload--text {
   border: none;
   border-radius: 0;

@@ -156,7 +156,7 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="less" scoped>
 .tags-view-container {
   position: relative;
   height: 34px;

@@ -18,18 +18,18 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="less" scoped>
 .error-box{
-	display: flex
-	align-items center
-	flex-direction column
+	display: flex;
+	align-items: center;
+	flex-direction: column;
 	.error_info{
-		display flex
-		justify-content center
-		align-items center
-		padding 20px 0px
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding: 20px 0px;
 		img {
-			width 500px
+			width: 500px;
 		}
 	}
 }

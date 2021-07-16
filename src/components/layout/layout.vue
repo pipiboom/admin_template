@@ -1,15 +1,18 @@
 <template>
   <div class="wrapper">
     <v-head />
-    <v-sidebar />
-    <div class="content-box" :class="{'content-collapse':collapse}">
-      <v-tags />
-      <div class="content">
-        <app-main />
-        <el-footer>
-          Version 1.0.0 Copyright
-          <i class="fa fa-copyright" aria-hidden="true" /> 2019 Wondertek Co., Ltd.
-        </el-footer>
+    <div class="main">
+      <v-sidebar />
+      <div class="content-box" :class="{ 'content-collapse': collapse }">
+        <v-tags />
+        <div class="content">
+          <app-main />
+          <el-footer>
+            Version 1.0.0 Copyright
+            <i class="fa fa-copyright" aria-hidden="true" /> 2019 Wondertek Co.,
+            Ltd.
+          </el-footer>
+        </div>
       </div>
     </div>
   </div>
@@ -23,23 +26,23 @@ import AppMain from "./AppMain.vue";
 export default {
   data() {
     return {
-      collapse: false
+      collapse: false,
     };
   },
   components: {
     vHead,
     vSidebar,
     vTags,
-    AppMain
+    AppMain,
   },
   created() {
-    this.$bus.on("collapse", msg => {
+    this.$bus.on("collapse", (msg) => {
       this.collapse = msg;
     });
-  }
+  },
 };
 </script>
-<style scoped lang="stylus">
+<style scoped lang="less">
 .el-footer {
   font-size: 12px;
   color: #c0c1c3;
@@ -61,17 +64,17 @@ export default {
   -webkit-transition: left 0.3s ease-in-out;
   transition: left 0.3s ease-in-out;
   background: #f0f0f0;
-  overflow hidden
+  overflow: hidden;
   .content {
     width: auto;
     height: 100%;
     padding: 20px;
     overflow-y: scroll;
     box-sizing: border-box;
-    background #fff;
+    background: #fff;
   }
 }
-.content-collapse{
+.content-collapse {
   left: 65px;
 }
 </style>

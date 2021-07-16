@@ -57,10 +57,5 @@ export default {
         break
       }
     }
-  },
-  // 存储用户名
-  SET_TOKEN (state, userInfo) {
-    state.token = userInfo.username
-    state.password = userInfo.password
   }
 }

@@ -40,29 +40,29 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="less" scoped>
 .login-box{
-	display flex
-	justify-content center
-	align-items center
-	height 100vh
-	flex-direction column
-	background url('../../../assets/images/loginBg.jpg') no-repeat left top
-	background-size 100% 100%
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+	background: url('../../../assets/images/loginBg.jpg') no-repeat left top;
+	background-size: 100% 100%;
 	.sys_name{
-		color: #fff
-		font-size: 24px
-		padding-bottom 20px
+		color: #fff;
+		font-size: 24px;
+		padding-bottom: 20px;
 	}
 	.login_info{
 		width: 300px;
-		display flex
-		flex-direction column
-		background hsla(0,0%,100%,.3)
-		border-radius 5px
-		padding 20px
+		display: flex;
+		flex-direction: column;
+		background: hsla(0,0%,100%,.3);
+		border-radius: 5px;
+		padding: 20px;
 		/deep/.el-form-item:last-child{
-			margin-bottom 0px !important;
+			margin-bottom: 0px !important;
 		}
 	}
 }

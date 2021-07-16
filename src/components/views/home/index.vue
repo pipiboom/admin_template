@@ -183,3 +183,9 @@ export default {
   }
 };
 </script>
+
+<style lang="less" scoped>
+.page{
+  background: @base;
+}
+</style>

@@ -37,7 +37,7 @@ export default {
 };
 </script>
 
-<style scoped lang="stylus">
+<style scoped lang="less">
 .header {
   height: 70px;
   padding: 0px 20px;
@@ -77,7 +77,7 @@ export default {
       }
     }
     .login_out{
-      cursor pointer
+      cursor: pointer;
     }
   }
 }

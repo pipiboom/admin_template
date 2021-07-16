@@ -31,12 +31,5 @@ export default {
   },
   updateVisitedView({ commit }, view) {
     commit('updateVisitedView', view)
-  },
-  // 登录权限操作
-  LoginByUsername({ commit }, userInfo) {
-    return new Promise(resolve => {
-      commit('SET_TOKEN', userInfo)
-      resolve()
-    })
   }
 }

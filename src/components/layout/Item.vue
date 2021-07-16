@@ -15,10 +15,10 @@ export default {
   render(h, context) {
     const { icon, title } = context.props
     const vnodes = []
-    if (icon.includes('svg')) {
-      vnodes.push(<icon-svg icon-class={icon} />)
-    } else {
+    if (icon.includes('el')) {
       vnodes.push(<i class={icon}></i>)
+    } else {
+      vnodes.push(<icon-svg icon-class={icon} />)
     }
     if (title) {
       vnodes.push(<span slot='title' style="margin-left: 10px">{(title)}</span>)
@@ -27,11 +27,11 @@ export default {
   }
 }
 </script>
-<style lang="stylus" scoped>
+<style lang="less" scoped>
   i {
-    margin-right: 0px !important;
-    width: 14px !important;
-    font-size: 14px !important;
+    margin-right: 0px;
+    width: 14px;
+    font-size: 14px;
     display: inline-block
   }
 </style>

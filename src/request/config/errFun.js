@@ -1,5 +1,32 @@
 import { Message } from 'element-ui'
 let constObj = require(resolve('src/assets/const'));
+
+let messageInstance = null;
+const rewriteMessage = (options) => {
+	if (messageInstance) {
+		messageInstance.close()
+	}
+	messageInstance = Message(options)
+}
+['error', 'success', 'info', 'warning'].forEach(type => {
+	rewriteMessage[type] = options => {
+		if (typeof options === 'string') {
+			options = {
+				message: options,
+				showClose: true
+			}
+		}
+		options.type = type
+		return rewriteMessage(options)
+	}
+})
+
+//错误提示中使用
+function handleError(data) {
+	rewriteMessage.error(data.message);
+	return window.Promise.reject(data)
+}
+
 export function errFun(err) {
 	let errInfo = {};
 	if (err.status) {
@@ -24,10 +51,10 @@ export function errFun(err) {
 			window.location.href = constObj.REDICT_URL;
 			break;
 		case 404:
-			Message({ message: '网络请求不存在', type: 'warning' })
+			handleError({ message: '网络请求不存在', type: 'warning' })
 			break
 		default:
-			Message({ message: msg, type: 'warning' })
+			handleError({ message: msg, type: 'warning' })
 			break;
 	}
 }

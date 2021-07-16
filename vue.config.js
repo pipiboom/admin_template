@@ -21,8 +21,16 @@ if (env === 'production') {
         }
     }))
 }
+
 // config主要配置
 module.exports = {
+    css: {
+        loaderOptions: {
+            less: {
+                import: resolve("src/assets/style/utils.less")
+            },
+        }
+    },
     // 关闭eslint方式（或者直接删除packjson.json里面的eslintConfig对象也可达到效果）
     lintOnSave: false, // 代码保存后eslint执行
     devServer: {
